@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My-Goals';
+  // goal = "watch finding nemo"
+  goals:string[];
+
+  // A constructor function defines the logic that should be executed 
+  // once the class is instantiated
+
+  constructor(){
+    this.goals = ['watch finding nemo',"learn angular","learn flask","finish school","do my internship"]
+  }
 }
