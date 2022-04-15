@@ -1,0 +1,19 @@
+<p>goal works!</p>
+<div class="container-fluid">
+    <p class="h1">
+      MY GOALS
+    </p>
+    <!-- <p>My Goal for today is {{goal}}</p> -->
+    <ul>
+      <li *ngFor="let goal of goals">
+        <!-- {{goal}} -->
+        <!-- For use with the classes you havr to say what you want or get object object -->
+        {{goal.name}}
+      </li>
+      <div class="container">
+        <p *ngIf="goals.length > 4">The goals are more than 4</p>
+        <p *ngIf="goals.length > 8">The goals are more than 8</p>
+      </div>
+    </ul>
+  </div>
+  
