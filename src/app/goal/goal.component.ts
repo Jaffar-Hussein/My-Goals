@@ -1,6 +1,4 @@
-import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { stringify } from 'querystring';
 import { Goal } from '../goal';
 
 @Component({
@@ -12,11 +10,11 @@ export class GoalComponent implements OnInit {
   goals:Goal[]
   constructor() { 
     this.goals = [
-      { id: 1, name: 'watch finding nemo' },
-      { id: 2, name: "learn angular" },
-      { id: 3, name: "learn flask" },
-      { id: 4, name: "finish school" },
-      { id: 5, name: "do my internship" },
+      { id: 1, name: 'watch finding nemo',description:"because it is fun with fishes" },
+      { id: 2, name: "learn angular",description:"because i will make money" },
+      { id: 3, name: "learn flask",description:"because because i like python" },
+      { id: 4, name: "finish school",description:"because i will get married InshAllah" },
+      { id: 5, name: "do my internship",description:"because I like the brain " },
     ]
   }
   

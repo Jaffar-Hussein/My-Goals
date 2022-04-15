@@ -9,6 +9,8 @@
         <!-- {{goal}} -->
         <!-- For use with the classes you havr to say what you want or get object object -->
         {{goal.name}}
+        <!-- Getting something from child to display and binfing to send info to it  -->
+        <app-goal-detail [goal]="goal"></app-goal-detail>
       </li>
       <div class="container">
         <p *ngIf="goals.length > 4">The goals are more than 4</p>
