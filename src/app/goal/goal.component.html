@@ -1,21 +1,26 @@
 <p>goal works!</p>
 <div class="container-fluid">
-    <p class="h1">
-      MY GOALS
-    </p>
-    <!-- <p>My Goal for today is {{goal}}</p> -->
-    <ul>
-      <li *ngFor="let goal of goals">
+  <p class="h1">
+    MY GOALS
+  </p>
+  <!-- <p>My Goal for today is {{goal}}</p> -->
+  <ul>
+    <div *ngFor="let goal of goals;let i = index">
+      <li>
         <!-- {{goal}} -->
         <!-- For use with the classes you havr to say what you want or get object object -->
         {{goal.name}}
-        <!-- Getting something from child to display and binfing to send info to it  -->
-        <app-goal-detail [goal]="goal"></app-goal-detail>
       </li>
-      <div class="container">
-        <p *ngIf="goals.length > 4">The goals are more than 4</p>
-        <p *ngIf="goals.length > 8">The goals are more than 8</p>
-      </div>
-    </ul>
-  </div>
-  
+      <!-- Output data binding child to parent  -->
+      <button class="btn btn-primary" (click)="toggleDetails(i)">Description</button>
+      <!-- Getting something from child to display and binfing to send info to it  -->
+      <app-goal-detail *ngIf="goal.descriptionVisibility" [goal]="goal"></app-goal-detail>
+
+    </div>
+
+    <div class="container">
+      <p *ngIf="goals.length > 4">The goals are more than 4</p>
+      <p *ngIf="goals.length > 8">The goals are more than 8</p>
+    </div>
+  </ul>
+</div>

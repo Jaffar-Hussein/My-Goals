@@ -7,17 +7,26 @@ import { Goal } from '../goal';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-  goals:Goal[]
-  constructor() { 
+  goals: Goal[]
+
+  constructor() {
     this.goals = [
-      { id: 1, name: 'watch finding nemo',description:"because it is fun with fishes" },
-      { id: 2, name: "learn angular",description:"because i will make money" },
-      { id: 3, name: "learn flask",description:"because because i like python" },
-      { id: 4, name: "finish school",description:"because i will get married InshAllah" },
-      { id: 5, name: "do my internship",description:"because I like the brain " },
+      // { id: 1, name: 'watch finding nemo',description:"because it is fun with fishes" },
+      // { id: 2, name: "learn angular",description:"because i will make money" },
+      // { id: 3, name: "learn flask",description:"because because i like python" },
+      // { id: 4, name: "finish school",description:"because i will get married InshAllah" },
+      // { id: 5, name: "do my internship",description:"because I like the brain " },
+      new Goal(1, 'watch finding nemo', "because it is fun with"),
+      new Goal(2, "learn angular", "because i will make money"),
+      new Goal(3, "learn flask", "because because i like python"),
+      new Goal(4, "finish school", "because i will get married InshAllah"),
+      new Goal(5, "do my internship", "because I like the brain ")
     ]
   }
-  
+  toggleDetails(i: number) {
+    this.goals[i].descriptionVisibility = !this.goals[i].descriptionVisibility;
+  }
+
 
   ngOnInit(): void {
     // goal = "watch finding nemo"
