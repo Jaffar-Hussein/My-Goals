@@ -9,8 +9,17 @@ import { Goal } from '../goal';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-
-  constructor() { }
+  goals:Goal[]
+  constructor() { 
+    this.goals = [
+      { id: 1, name: 'watch finding nemo' },
+      { id: 2, name: "learn angular" },
+      { id: 3, name: "learn flask" },
+      { id: 4, name: "finish school" },
+      { id: 5, name: "do my internship" },
+    ]
+  }
+  
 
   ngOnInit(): void {
     // goal = "watch finding nemo"
@@ -26,13 +35,6 @@ export class GoalComponent implements OnInit {
     // const getKeyValue = <T extends Goal, U extends keyof T>(key: U) => (Goal: T) =>
     // Goal[key];
     // let T: keyof Goal
-    goals: Goal[] = [
-      { id: 1, name: 'watch finding nemo' },
-      { id: 2, name: "learn angular" },
-      { id: 3, name: "learn flask" },
-      { id: 4, name: "finish school" },
-      { id: 5, name: "do my internship" },
-    ]
   }
 
 }
