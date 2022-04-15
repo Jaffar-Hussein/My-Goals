@@ -26,7 +26,12 @@ export class GoalComponent implements OnInit {
   toggleDetails(i: number) {
     this.goals[i].descriptionVisibility = !this.goals[i].descriptionVisibility;
   }
-
+  // DELETING A GOAL
+  completedGoal(isComplete:boolean,i:number){
+    if (isComplete){
+      this.goals.splice(i,1)
+    }
+  }
 
   ngOnInit(): void {
     // goal = "watch finding nemo"
