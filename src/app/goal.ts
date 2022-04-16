@@ -5,7 +5,7 @@
 // }
 export class Goal {
     descriptionVisibility: boolean;
-    constructor(public id: number, public name: string, public description: string) {
+    constructor(public id: number, public name: string, public description: string, public newDate: Date) {
         this.descriptionVisibility = false;
     }
 }

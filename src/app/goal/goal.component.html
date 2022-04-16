@@ -9,6 +9,9 @@
           <!-- For use with the classes you havr to say what you want or get object object -->
           {{goal.name.toUpperCase()}}
         </li>
+        <li class="text-muted text-sm">
+          This is due on {{goal.newDate|date}}
+        </li>
         <!-- Getting something from child to display and binfing to send info to it  -->
 
         <app-goal-detail *ngIf="goal.descriptionVisibility" [goal]="goal" (isComplete)="completedGoal($event,i)">
@@ -34,7 +37,7 @@
     </ul>
   </div>
   <div class="col-md-6">
-    <app-goal-form></app-goal-form>
+    <app-goal-form (addGoal)="updateGoal($event)"></app-goal-form>
   </div>
 
  </div>
