@@ -6,5 +6,5 @@ import{Goal} from './goal'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  
 }

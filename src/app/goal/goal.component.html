@@ -1,34 +1,40 @@
-<div class="container-fluid">
+ <div class="row">
+  <div class="container-fluid col-md-6">
 
-  <!-- <p>My Goal for today is {{goal}}</p> -->
-  <ul class="border border-success list-unstyled p-5">
-    <div appStrikethrough *ngFor="let goal of goals;let i = index" class="border border-light my-2">
-      <li>
-        <!-- {{goal}} -->
-        <!-- For use with the classes you havr to say what you want or get object object -->
-        {{goal.name.toUpperCase()}}
-      </li>
-      <!-- Getting something from child to display and binfing to send info to it  -->
+    <!-- <p>My Goal for today is {{goal}}</p> -->
+    <ul class="border border-success list-unstyled p-5">
+      <div appStrikethrough *ngFor="let goal of goals;let i = index" class="border border-light my-2">
+        <li>
+          <!-- {{goal}} -->
+          <!-- For use with the classes you havr to say what you want or get object object -->
+          {{goal.name.toUpperCase()}}
+        </li>
+        <!-- Getting something from child to display and binfing to send info to it  -->
 
-      <app-goal-detail *ngIf="goal.descriptionVisibility" [goal]="goal" (isComplete)="completedGoal($event,i)">
-      </app-goal-detail>
-      <!-- Output data binding child to parent  -->
-      <button class="btn btn-sm btn-outline-success m-2" (click)="toggleDetails(i)">Description</button>
+        <app-goal-detail *ngIf="goal.descriptionVisibility" [goal]="goal" (isComplete)="completedGoal($event,i)">
+        </app-goal-detail>
+        <!-- Output data binding child to parent  -->
+        <button class="btn btn-sm btn-outline-success m-2" (click)="toggleDetails(i)">Description</button>
 
-    </div>
-    <div class="text-muted text-center">
-      <p *ngIf="goals.length > 1">You have just {{goals.length}} more goals to clear </p>
-      <!-- <p *ngIf="goals.length > 8">The goals are more than 8</p> -->
-    </div>
-    <div *ngIf="goals.length < 1">
-      <figure class="text-center">
-        <blockquote class="blockquote">
-          <p>You are never too old to set another goal or to dream a new dream.</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          C.S.Lewis
-        </figcaption>
-      </figure>
-    </div>
-  </ul>
-</div>
+      </div>
+      <div class="text-muted text-center">
+        <p *ngIf="goals.length > 1">You have just {{goals.length}} more goals to clear </p>
+        <!-- <p *ngIf="goals.length > 8">The goals are more than 8</p> -->
+      </div>
+      <div *ngIf="goals.length < 1">
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <p>You are never too old to set another goal or to dream a new dream.</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            C.S.Lewis
+          </figcaption>
+        </figure>
+      </div>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <app-goal-form></app-goal-form>
+  </div>
+
+ </div>
