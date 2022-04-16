@@ -16,11 +16,11 @@ export class GoalComponent implements OnInit {
       // { id: 3, name: "learn flask",description:"because because i like python" },
       // { id: 4, name: "finish school",description:"because i will get married InshAllah" },
       // { id: 5, name: "do my internship",description:"because I like the brain " },
-      new Goal(1, 'watch finding nemo', "because it is fun with",new Date("2-01-1987")),
-      new Goal(2, "learn angular", "because i will make money",new Date("2-01-1987")),
-      new Goal(3, "learn flask", "because because i like python",new Date("2-01-1987")),
-      new Goal(4, "finish school", "because i will get married InshAllah",new Date("2-01-1987")),
-      new Goal(5, "do my internship", "because I like the brain ",new Date("2-01-1987"))
+      new Goal(1, 'watch finding nemo', "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente distinctio dolorem! Quidem temporibus quisquam ad iste adipisci, porro, ipsa voluptatem corporis omnis repellendus totam alias similique voluptatum tempore. Libero porro, excepturi esse placeat nihil, rerum reprehenderit cupiditate maxime fugiat, quaerat dicta exercitationem aliquam quidem id quisquam quasi. Nostrum, voluptates!",new Date("2-01-1987")),
+      new Goal(2, "learn angular", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente distinctio dolorem! Quidem temporibus quisquam ad iste adipisci, porro, ipsa voluptatem corporis omnis repellendus totam alias similique voluptatum tempore. Libero porro, excepturi esse placeat nihil, rerum reprehenderit cupiditate maxime fugiat, quaerat dicta exercitationem aliquam quidem id quisquam quasi. Nostrum, voluptates!",new Date("2-01-1987")),
+      new Goal(3, "learn flask", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente distinctio dolorem! Quidem temporibus quisquam ad iste adipisci, porro, ipsa voluptatem corporis omnis repellendus totam alias similique voluptatum tempore. Libero porro, excepturi esse placeat nihil, rerum reprehenderit cupiditate maxime fugiat, quaerat dicta exercitationem aliquam quidem id quisquam quasi. Nostrum, voluptates!",new Date("2-01-1987")),
+      new Goal(4, "finish school", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente distinctio dolorem! Quidem temporibus quisquam ad iste adipisci, porro, ipsa voluptatem corporis omnis repellendus totam alias similique voluptatum tempore. Libero porro, excepturi esse placeat nihil, rerum reprehenderit cupiditate maxime fugiat, quaerat dicta exercitationem aliquam quidem id quisquam quasi. Nostrum, voluptates!",new Date("2-01-1987")),
+      new Goal(5, "do my internship", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sapiente distinctio dolorem! Quidem temporibus quisquam ad iste adipisci, porro, ipsa voluptatem corporis omnis repellendus totam alias similique voluptatum tempore. Libero porro, excepturi esse placeat nihil, rerum reprehenderit cupiditate maxime fugiat, quaerat dicta exercitationem aliquam quidem id quisquam quasi. Nostrum, voluptates!",new Date("2-01-1987"))
     ]
   }
   toggleDetails(i: number) {

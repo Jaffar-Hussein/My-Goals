@@ -7,10 +7,10 @@
         <li>
           <!-- {{goal}} -->
           <!-- For use with the classes you havr to say what you want or get object object -->
-          {{goal.name.toUpperCase()}}
+          {{goal.name|uppercase}}
         </li>
         <li class="text-muted text-sm">
-          This is due on {{goal.newDate|date}}
+          This is due on {{goal.newDate|dateCount}}
         </li>
         <!-- Getting something from child to display and binfing to send info to it  -->
 
